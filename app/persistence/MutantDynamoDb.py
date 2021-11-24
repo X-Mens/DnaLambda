@@ -1,6 +1,8 @@
+from os import getenv
+
 from boto3 import resource
 
-DYNAMO_TABLE = "test_john"  # getenv("DYNAMO_TABLE")
+DYNAMO_TABLE = getenv("DYNAMO_TABLE_DNA")
 dynamodb = resource('dynamodb')
 dna_table = dynamodb.Table(DYNAMO_TABLE)
 

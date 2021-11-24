@@ -1,10 +1,11 @@
 import json
 import logging
+import os
 
 from redis import Redis
 
-HOST_REDIS = "172.17.0.1"  # os.environ['HOST_REDIS']
-PORT_REDIS = "6379"  # os.environ['PORT_REDIS']
+HOST_REDIS = os.environ['HOST_REDIS']
+PORT_REDIS = os.environ['PORT_REDIS']
 
 redis = Redis(host=HOST_REDIS, port=PORT_REDIS)
 

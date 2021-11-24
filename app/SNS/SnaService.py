@@ -1,9 +1,10 @@
 import json
+import os
 
 import boto3
 
 sns = boto3.client("sns")
-topic = "arn:aws:sns:us-east-1:142347585731:test"  # os.environ['TOPIC_ANR']
+topic = os.environ['TOPIC_ARN']
 
 
 class Sns:
