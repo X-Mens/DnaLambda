@@ -30,7 +30,7 @@ def lambda_handler(event, context):
         handler = handler_type(event)
         status, response = handler.process()
         response = build_response(status, response)
-        logging.info(f'Response load confirmation [{response}]')
+        logging.info(f'Response [{response}]')
     except Exception as e:
         logging.error(e)
         tb = sys.exc_info()[2]
@@ -39,6 +39,5 @@ def lambda_handler(event, context):
         logging.error(py_msg)
         response = build_response(500, e.args[0])
     return response
-
 
 
