@@ -1,14 +1,13 @@
 import json
-import logging
 
 
 def build_response(resp_code, response):
-    """Builds a response object
-    Parameters:
-        response: Dictionary
-        resp_code: Int
-    Returns:
-        response: Dictionary"""
+    """
+    Builds a response object
+    :param resp_code: http code
+    :param response: body message
+    :return: json that represent http result
+    """
 
     resp_code = str(resp_code) if not isinstance(resp_code, str) else resp_code
 

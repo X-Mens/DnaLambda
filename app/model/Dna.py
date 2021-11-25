@@ -1,5 +1,3 @@
-from app.model.DnaType import DnaType
-
 dx = [1, 2, 3]
 dy = [1, 2, 3]
 
@@ -31,7 +29,8 @@ class Dna:
             oblique_up &= self.__is_there_sequence(y - i >= 0 and x + i < self.adnSize, x + i, y - i, character)
             oblique_down &= self.__is_there_sequence(y + i < self.adnSize and x + i < self.adnSize,
                                                      x + i, y + i, character)
-        if oblique_up and oblique_down: return 2
+        if oblique_up and oblique_down:
+            return 2
         if oblique_up or oblique_down:
             return 1
         else:
